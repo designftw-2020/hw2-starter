@@ -29,12 +29,12 @@
                 <button v-else @click="$graffiti.login()">Log in</button>
             </header>
 
-            <!-- Button to save data, feel free to change this! -->
+            <!-- Button to save data, feel free to change this UI -->
             <graffiti-personal-data
                 v-if="$graffitiSession.value"
+                :session="$graffitiSession.value"
                 v-model="myData"
                 name="my-expense-data"
-                :session="$graffitiSession.value"
                 :schema="{}"
                 v-slot="{ save }"
             >
